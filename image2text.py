@@ -1,8 +1,6 @@
 from PIL import Image
 import sys
 sys.path.append('/Users/oomoriyumehiro/Downloads')
-import pprint
-pprint.pprint(sys.path)
 import pyocr
 import pyocr.builders
 
@@ -17,7 +15,7 @@ langs = tool.get_available_languages()
 print("Available languages: %s" % ", ".join(langs))
 
 txt = tool.image_to_string(
-    Image.open('/Users/oomoriyumehiro/Downloads/test.png'),
+    Image.open('/Users/oomoriyumehiro/Downloads/test01.png'),
     lang='jpn',
     builder=pyocr.builders.TextBuilder()
 )
